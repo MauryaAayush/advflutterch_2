@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Date_Picker extends StatelessWidget {
-  const Date_Picker({super.key});
+class Picker_Date extends StatelessWidget {
+  const Picker_Date({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +33,16 @@ class Date_Picker extends StatelessWidget {
             children: [
               IconButton(
                   onPressed: () async {
-
                     DateTime selectedDate = await showDatePicker(
-                            context: context,
-                            firstDate: DateTime(1950),
-                            lastDate: DateTime(2050),
-                            initialDate: DateTime.now(),
-                    ) ?? DateTime.now();
+                          context: context,
+                          // barrierColor:Colors.yellow,
+                          firstDate: DateTime(1950),
+                          lastDate: DateTime(2050),
+                          initialDate: DateTime.now(),
+                        ) ??
+                        DateTime.now();
                     print(selectedDate);
                   },
-
                   icon: Icon(
                     Icons.date_range,
                     size: 30,
@@ -52,7 +52,26 @@ class Date_Picker extends StatelessWidget {
                 style: TextStyle(color: Colors.teal, fontSize: 30),
               ),
             ],
-          )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                  onPressed: () async {
+                    TimeOfDay selectedTime = await showTimePicker(
+                            context: context, initialTime: TimeOfDay.now()) ??
+                        TimeOfDay.now();
+                  },
+                  icon: Icon(
+                    Icons.timer_outlined,
+                    size: 30,
+                  )),
+              Text(
+                'Time',
+                style: TextStyle(color: Colors.teal, fontSize: 30),
+              ),
+            ],
+          ),
         ],
       ),
     );
