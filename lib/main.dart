@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/IOS',
+      initialRoute: '/',
       routes: {
         '/' : (context) => const Android(),
-        '/IOS' : (context) =>  Ios_Main(),
+        '/IOS' : (context) =>  const Ios_Main(),
       },
 
 
