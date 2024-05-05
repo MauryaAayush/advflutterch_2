@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Date_Picker/Date_Picker_Theme_Screen.dart';
+import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
+import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Android/Android_Main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/',
+      initialRoute: '/IOS',
       routes: {
-        '/' : (context) => const Date_Picker(),
+        '/' : (context) => const Android(),
+        '/IOS' : (context) =>  Ios_Main(),
       },
 
 
