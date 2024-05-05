@@ -84,21 +84,99 @@ class Picker_Date extends StatelessWidget {
                       builder: (context) {
                         return AlertDialog(
                           title: Text('Phone Ringtone'),
-                          content: Column(
-                            children: [
-                              RadioListTile(
-                                title: Text('None'),
-                                value: 'None',
-                                groupValue: Provider
-                                    .of<DialogBoxProvider>(
-                                    context, listen: true)
-                                    .selectedRingtone,
-                                onChanged: (value) {
-                                  Provider.of<DialogBoxProvider>(context,listen: false)
-                                      .setDialog(value.toString());
-                                },)
-                            ],
+                          content: Container(
+                            height: 100,
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.vertical,
+                              child: Column(
+                                children: [
+                                  Divider(
+                                    height: 2,
+                                    color: Colors.grey,
+                                  ),
+                                  RadioListTile(
+                                    title: Text('None'),
+                                    value: 'None',
+                                    groupValue: Provider
+                                        .of<DialogBoxProvider>(
+                                        context, listen: true)
+                                        .selectedRingtone,
+                                    onChanged: (value) {
+                                      Provider.of<DialogBoxProvider>(context,listen: false)
+                                          .setDialog(value.toString());
+                                    },),
+
+
+
+                                  RadioListTile(
+                                    title: Text('None'),
+                                    value: 'None',
+                                    groupValue: Provider
+                                        .of<DialogBoxProvider>(
+                                        context, listen: true)
+                                        .selectedRingtone,
+                                    onChanged: (value) {
+                                      Provider.of<DialogBoxProvider>(context,listen: false)
+                                          .setDialog(value.toString());
+                                    },),
+
+
+
+                                  RadioListTile(
+                                    title: Text('None'),
+                                    value: 'None',
+                                    groupValue: Provider
+                                        .of<DialogBoxProvider>(
+                                        context, listen: true)
+                                        .selectedRingtone,
+                                    onChanged: (value) {
+                                      Provider.of<DialogBoxProvider>(context,listen: false)
+                                          .setDialog(value.toString());
+                                    },),
+
+
+                                  RadioListTile(
+                                    title: Text('None'),
+                                    value: 'None',
+                                    groupValue: Provider
+                                        .of<DialogBoxProvider>(
+                                        context, listen: true)
+                                        .selectedRingtone,
+                                    onChanged: (value) {
+                                      Provider.of<DialogBoxProvider>(context,listen: false)
+                                          .setDialog(value.toString());
+                                    },),
+
+                                  RadioListTile(
+                                    title: Text('None'),
+                                    value: 'None',
+                                    groupValue: Provider
+                                        .of<DialogBoxProvider>(
+                                        context, listen: true)
+                                        .selectedRingtone,
+                                    onChanged: (value) {
+                                      Provider.of<DialogBoxProvider>(context,listen: false)
+                                          .setDialog(value.toString());
+                                    },),
+                                  Divider(),
+                                ],
+                              ),
+                            ),
                           ),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('OK'),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Cancel'),
+                            ),
+                          ],
                         );
                       },
                     );
