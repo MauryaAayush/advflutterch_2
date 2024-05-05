@@ -1,5 +1,7 @@
 import 'package:advflutterch_2/Screens/Date_Time_Picker(Lec-1)/Provider/Dialog_Provider_Screen.dart';
+
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 
 class Picker_Date extends StatelessWidget {
@@ -36,12 +38,12 @@ class Picker_Date extends StatelessWidget {
               IconButton(
                   onPressed: () async {
                     DateTime selectedDate = await showDatePicker(
-                      context: context,
-                      // barrierColor:Colors.yellow,
-                      firstDate: DateTime(1950),
-                      lastDate: DateTime(2050),
-                      initialDate: DateTime.now(),
-                    ) ??
+                          context: context,
+                          // barrierColor:Colors.yellow,
+                          firstDate: DateTime(1950),
+                          lastDate: DateTime(2050),
+                          initialDate: DateTime.now(),
+                        ) ??
                         DateTime.now();
                     print(selectedDate);
                   },
@@ -61,7 +63,7 @@ class Picker_Date extends StatelessWidget {
               IconButton(
                   onPressed: () async {
                     TimeOfDay selectedTime = await showTimePicker(
-                        context: context, initialTime: TimeOfDay.now()) ??
+                            context: context, initialTime: TimeOfDay.now()) ??
                         TimeOfDay.now();
                   },
                   icon: Icon(
@@ -85,82 +87,103 @@ class Picker_Date extends StatelessWidget {
                         return AlertDialog(
                           title: Text('Phone Ringtone'),
                           content: Container(
-                            height: 100,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Column(
-                                children: [
-                                  Divider(
-                                    height: 2,
-                                    color: Colors.grey,
+                            height: 150,
+                            child: Column(
+                              children: [
+                                Divider(
+                                  height: 2,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  height: 145,
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.vertical,
+                                    child: Column(
+                                      children: [
+                                        RadioListTile(
+                                          title: Text('None'),
+                                          value: 'None',
+                                          groupValue:
+                                              Provider.of<DialogBoxProvider>(
+                                                      context,
+                                                      listen: true)
+                                                  .selectedRingtone,
+                                          onChanged: (value) {
+                                            Provider.of<DialogBoxProvider>(
+                                                    context,
+                                                    listen: false)
+                                                .setDialog(value.toString());
+                                          },
+                                        ),
+                                        RadioListTile(
+                                          title: Text('Callisto'),
+                                          value: 'Callisto',
+                                          groupValue:
+                                              Provider.of<DialogBoxProvider>(
+                                                      context,
+                                                      listen: true)
+                                                  .selectedRingtone,
+                                          onChanged: (value) {
+                                            Provider.of<DialogBoxProvider>(
+                                                    context,
+                                                    listen: false)
+                                                .setDialog(value.toString());
+                                          },
+                                        ),
+                                        RadioListTile(
+                                          title: Text('Ganymede'),
+                                          value: 'Ganymede',
+                                          groupValue:
+                                              Provider.of<DialogBoxProvider>(
+                                                      context,
+                                                      listen: true)
+                                                  .selectedRingtone,
+                                          onChanged: (value) {
+                                            Provider.of<DialogBoxProvider>(
+                                                    context,
+                                                    listen: false)
+                                                .setDialog(value.toString());
+                                          },
+                                        ),
+                                        RadioListTile(
+                                          title: Text('Luna'),
+                                          value: 'Luna',
+                                          groupValue:
+                                              Provider.of<DialogBoxProvider>(
+                                                      context,
+                                                      listen: true)
+                                                  .selectedRingtone,
+                                          onChanged: (value) {
+                                            Provider.of<DialogBoxProvider>(
+                                                    context,
+                                                    listen: false)
+                                                .setDialog(value.toString());
+                                          },
+                                        ),
+                                        RadioListTile(
+                                          title: Text('My Ringtone'),
+                                          value: 'My Ringtone',
+                                          groupValue:
+                                              Provider.of<DialogBoxProvider>(
+                                                      context,
+                                                      listen: true)
+                                                  .selectedRingtone,
+                                          onChanged: (value) {
+                                            Provider.of<DialogBoxProvider>(
+                                                    context,
+                                                    listen: false)
+                                                .setDialog(value.toString());
+                                          },
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  RadioListTile(
-                                    title: Text('None'),
-                                    value: 'None',
-                                    groupValue: Provider
-                                        .of<DialogBoxProvider>(
-                                        context, listen: true)
-                                        .selectedRingtone,
-                                    onChanged: (value) {
-                                      Provider.of<DialogBoxProvider>(context,listen: false)
-                                          .setDialog(value.toString());
-                                    },),
-
-
-
-                                  RadioListTile(
-                                    title: Text('None'),
-                                    value: 'None',
-                                    groupValue: Provider
-                                        .of<DialogBoxProvider>(
-                                        context, listen: true)
-                                        .selectedRingtone,
-                                    onChanged: (value) {
-                                      Provider.of<DialogBoxProvider>(context,listen: false)
-                                          .setDialog(value.toString());
-                                    },),
-
-
-
-                                  RadioListTile(
-                                    title: Text('None'),
-                                    value: 'None',
-                                    groupValue: Provider
-                                        .of<DialogBoxProvider>(
-                                        context, listen: true)
-                                        .selectedRingtone,
-                                    onChanged: (value) {
-                                      Provider.of<DialogBoxProvider>(context,listen: false)
-                                          .setDialog(value.toString());
-                                    },),
-
-
-                                  RadioListTile(
-                                    title: Text('None'),
-                                    value: 'None',
-                                    groupValue: Provider
-                                        .of<DialogBoxProvider>(
-                                        context, listen: true)
-                                        .selectedRingtone,
-                                    onChanged: (value) {
-                                      Provider.of<DialogBoxProvider>(context,listen: false)
-                                          .setDialog(value.toString());
-                                    },),
-
-                                  RadioListTile(
-                                    title: Text('None'),
-                                    value: 'None',
-                                    groupValue: Provider
-                                        .of<DialogBoxProvider>(
-                                        context, listen: true)
-                                        .selectedRingtone,
-                                    onChanged: (value) {
-                                      Provider.of<DialogBoxProvider>(context,listen: false)
-                                          .setDialog(value.toString());
-                                    },),
-                                  Divider(),
-                                ],
-                              ),
+                                ),
+                                Divider(
+                                  height: 2,
+                                  color: Colors.grey,
+                                ),
+                              ],
                             ),
                           ),
                           actions: [
@@ -182,7 +205,7 @@ class Picker_Date extends StatelessWidget {
                     );
                   },
                   icon: Icon(
-                    Icons.list,
+                    Icons.filter_list_sharp,
                     size: 30,
                   )),
               Text(
