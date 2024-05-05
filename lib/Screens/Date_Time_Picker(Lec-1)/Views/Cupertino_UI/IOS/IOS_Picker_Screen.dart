@@ -26,23 +26,91 @@ class Ios_Pickers extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: IconButton(
-          onPressed: () {
-            showCupertinoModalPopup(
-              context: context,
-              builder: (BuildContext builder) {
-                return Container(
-                  height: 200,
-                  child: CupertinoDatePicker(
-                    mode: CupertinoDatePickerMode.date,
-                    initialDateTime: DateTime.now(),
-                    onDateTimeChanged: (DateTime newDateTime) {},
-                  ),
-                );
-              },
-            );
-          },
-          icon: Icon(Icons.date_range),
+        body: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    showCupertinoModalPopup(
+                      context: context,
+                      builder: (BuildContext builder) {
+                        return Container(
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            mode: CupertinoDatePickerMode.date,
+                            initialDateTime: DateTime.now(),
+                            onDateTimeChanged: (DateTime newDateTime) {},
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  icon: Icon(Icons.date_range),
+                ),
+
+                Text('Date',style: TextStyle(
+                  fontSize: 30,
+                ),)
+              ],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    showCupertinoModalPopup(
+                      context: context,
+                      builder: (BuildContext builder) {
+                        return Container(
+                          height: 200,
+                          child: CupertinoTimerPicker(onTimerDurationChanged: (value) {
+                                (Duration value){
+                            };
+                          },),
+                        );
+                      },
+                    );
+                  },
+                  icon: Icon(Icons.timer_outlined),
+                ),
+
+                Text('Time',style: TextStyle(
+                  fontSize: 30,
+                ),)
+              ],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    showCupertinoModalPopup(
+                      context: context,
+                      builder: (BuildContext builder) {
+                        return Container(
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            mode: CupertinoDatePickerMode.date,
+                            initialDateTime: DateTime.now(),
+                            onDateTimeChanged: (DateTime newDateTime) {},
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  icon: Icon(Icons.date_range),
+                ),
+
+                Text('Action Sheet',style: TextStyle(
+                  fontSize: 30,
+                ),)
+              ],
+            ),
+          ],
         ));
   }
 }
