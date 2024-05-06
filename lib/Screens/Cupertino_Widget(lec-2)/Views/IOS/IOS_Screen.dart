@@ -11,11 +11,6 @@ class IOS_Screen extends StatelessWidget {
         navigationBar: CupertinoNavigationBar(
           middle: Text('IOS'),
         ),
-        // child: Center(
-        //   child: Container(
-        //     height: 100,
-        //     width: 100,
-        //     color: CupertinoColors.activeBlue,),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -162,7 +157,6 @@ class IOS_Screen extends StatelessWidget {
                     );
                   },
                 ),
-                
               ],
             ),
             Row(
@@ -178,7 +172,7 @@ class IOS_Screen extends StatelessWidget {
                           height: 200,
                           child: CupertinoTimerPicker(
                             onTimerDurationChanged: (value) {
-                                  (Duration value) {};
+                              (Duration value) {};
                             },
                           ),
                         );
@@ -186,8 +180,13 @@ class IOS_Screen extends StatelessWidget {
                     );
                   },
                 ),
-
               ],
+            ),
+            CupertinoListTile(
+              leading: Icon(CupertinoIcons.device_phone_portrait),
+              trailing: Text('\$1500'),
+              title: Text('Apple'),
+              subtitle: Text('I phone 15'),
             ),
           ],
         ),
