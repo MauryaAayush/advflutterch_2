@@ -87,7 +87,7 @@ A DialogBox provides a versatile interface element for displaying various types 
   
  <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/fea306b0-f37f-40e0-80b1-d4ac2c6884aa" height=500px hspace=20>
  <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/a45041f2-cef9-4bf3-b012-66e9586f6c54" height=500px hspace=20>
-  
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/1bdaa3a8-314b-43bf-8faf-13d30caeb061"> 
 </div>
 
 
@@ -172,6 +172,7 @@ A DialogBox provides a versatile interface element for displaying various types 
 
 <div align="center">
   <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/e131ea5a-89aa-4a89-bbb0-f9d46e610417" height=500px hspace=20>  
+  <video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/1067a8bf-9a0e-4dc2-88f4-d1b7b867e7b2>
 </div>
 
 
