@@ -10,6 +10,9 @@ class IOS_Screen extends StatelessWidget {
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text('IOS'),
+          trailing: CupertinoSwitch(value: true, onChanged: (value) {
+
+          },),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

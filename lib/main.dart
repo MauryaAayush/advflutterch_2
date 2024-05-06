@@ -2,6 +2,7 @@ import 'package:advflutterch_2/Screens/Date_Time_Picker(Lec-1)/Provider/Dialog_P
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Screens/Cupertino_Widget(lec-2)/Views/Android/Android_Screen.dart';
 import 'Screens/Cupertino_Widget(lec-2)/Views/IOS/IOS_Screen.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Android/Android_Main.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const Android(),
         '/IOS': (context) => const Ios_Main(),
-        '/check': (context) =>  const IOS_Screen(),
+        '/check': (context) =>  const Android_Screen(),
       },
     );
   }
