@@ -8,7 +8,6 @@
 
 The DatePicker widget in Flutter allows users to select a date from a calendar-like interface. It provides a convenient way to capture date input from users in your Flutter applications.
 
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
