@@ -53,7 +53,7 @@ class IOS_Screen extends StatelessWidget {
                               child: Text(
                                 'Profiteroles',
                                 style: TextStyle(
-                                    color: Color(0xFF2196F3FF),
+                                    color: CupertinoColors.activeBlue,
                                     fontSize: 23,
                                     fontWeight: FontWeight.w400,
                                     letterSpacing: 1),
@@ -79,7 +79,7 @@ class IOS_Screen extends StatelessWidget {
                               child: Text(
                                 'Trifle',
                                 style: TextStyle(
-                                    color: Color(0xFF2196F3FF),
+                                    color: CupertinoColors.activeBlue,
                                     fontSize: 23,
                                     fontWeight: FontWeight.w400,
                                     letterSpacing: 1),
@@ -94,7 +94,7 @@ class IOS_Screen extends StatelessWidget {
                             child: const Text(
                               'Cancel',
                               style: TextStyle(
-                                  color: Color(0xFF2196F3FF),
+                                  color: CupertinoColors.activeBlue,
                                   fontSize: 23,
                                   fontWeight: FontWeight.w600),
                             ),
@@ -114,9 +114,10 @@ class IOS_Screen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CupertinoButton(
-                  child: Text('Alert Dialog',style: TextStyle(
-                    fontSize: 20
-                  ),),
+                  child: Text(
+                    'Alert Dialog',
+                    style: TextStyle(fontSize: 20),
+                  ),
                   onPressed: () {
                     showCupertinoModalPopup(
                       context: context,
@@ -124,8 +125,10 @@ class IOS_Screen extends StatelessWidget {
                         return CupertinoAlertDialog(
                           title: Text('Danger'),
                           actions: [
-                            CupertinoButton(child: Text('Cancel'), onPressed: (){}),
-                            CupertinoButton(child: Text('Save'), onPressed: (){})
+                            CupertinoButton(
+                                child: Text('Cancel'), onPressed: () {}),
+                            CupertinoButton(
+                                child: Text('Save'), onPressed: () {})
                           ],
                         );
                       },
@@ -133,6 +136,10 @@ class IOS_Screen extends StatelessWidget {
                   },
                 ),
               ],
+            ),
+            CupertinoButton.filled(
+              child: Text('Enter'),
+              onPressed: () {},
             ),
 
           ],
