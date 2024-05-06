@@ -141,7 +141,54 @@ class IOS_Screen extends StatelessWidget {
               child: Text('Enter'),
               onPressed: () {},
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CupertinoButton(
+                  child: Text('Date_Picker'),
+                  onPressed: () {
+                    showCupertinoModalPopup(
+                      context: context,
+                      builder: (BuildContext builder) {
+                        return Container(
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            mode: CupertinoDatePickerMode.date,
+                            initialDateTime: DateTime.now(),
+                            onDateTimeChanged: (DateTime newDateTime) {},
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
+                
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CupertinoButton(
+                  child: Text('Timer_Picker'),
+                  onPressed: () {
+                    showCupertinoModalPopup(
+                      context: context,
+                      builder: (BuildContext builder) {
+                        return Container(
+                          height: 200,
+                          child: CupertinoTimerPicker(
+                            onTimerDurationChanged: (value) {
+                                  (Duration value) {};
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
 
+              ],
+            ),
           ],
         ),
       ),
