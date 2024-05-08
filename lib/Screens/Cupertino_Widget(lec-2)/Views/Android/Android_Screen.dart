@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../Provider/System_Provider.dart';
 
 class Android_Screen extends StatelessWidget {
   const Android_Screen({super.key});
@@ -13,8 +16,10 @@ class Android_Screen extends StatelessWidget {
           leading: Icon(Icons.arrow_back_ios_new),
           title: Text('Android'),
           actions: [
-            Switch(value: true, onChanged: (value) {
-              
+            Switch(value: Provider.of<SystemProvider>(context, listen: true).isIOS,
+              onChanged: (value) {
+                Provider.of<SystemProvider>(context, listen: false)
+                    .changeLibrary(value);
             },)
           ],
         ),
@@ -23,11 +28,27 @@ class Android_Screen extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
 
-              Row(
-                children: [
-
-                ],
-              ),
+              TextButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => Center(
+                        child: Text(
+                          "Welcome to Android (material) bottom sheet",
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "Bottom Sheet",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.teal,
+                    ),
+                  )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -72,7 +93,65 @@ class Android_Screen extends StatelessWidget {
                   ),
                 ],
               ),
+              CircularProgressIndicator(
+                color: Colors.teal,
+              ),
 
+              TextButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: Text("Material"),
+                        content: Text(
+                            "Alert Dialog Box -> Android (Material)"),
+                        actions: [
+                          TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: Text(
+                                "okay",
+                                style: TextStyle(
+                                  color: Colors.teal,
+                                ),
+                              ))
+                        ],
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "Alert Dialog",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.teal,
+                    ),
+                  )),
+
+              ListTile(
+                trailing: Text(' \$500',
+                style: TextStyle(
+                  fontSize: 25
+                ),),
+                leading: Icon(
+                  Icons.android,
+                  color: Colors.teal,
+                  size: 40,
+                ),
+                title: Text(
+                  "Google",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                subtitle: Text(
+                  "Pixel 6 pro",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+
+                  ),
+                ),
+              )
             ],
           ),
           ),

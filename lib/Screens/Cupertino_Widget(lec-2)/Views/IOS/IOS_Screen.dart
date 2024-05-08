@@ -1,4 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
+
+import '../../Provider/System_Provider.dart';
 
 class IOS_Screen extends StatelessWidget {
   const IOS_Screen({super.key});
@@ -10,8 +13,11 @@ class IOS_Screen extends StatelessWidget {
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text('IOS'),
-          trailing: CupertinoSwitch(value: true, onChanged: (value) {
-
+          trailing: CupertinoSwitch(
+            value:  Provider.of<SystemProvider>(context, listen: true).isIOS,
+            onChanged: (value) {
+              Provider.of<SystemProvider>(context, listen: false)
+                  .changeLibrary(value);
           },),
         ),
         child: Column(
@@ -24,7 +30,7 @@ class IOS_Screen extends StatelessWidget {
                   child: Icon(
                     CupertinoIcons.list_bullet_indent,
                     size: 30,
-                    color: CupertinoColors.destructiveRed,
+                    color: CupertinoColors.activeBlue,
                   ),
                   onPressed: () {
                     showCupertinoModalPopup(
@@ -106,7 +112,7 @@ class IOS_Screen extends StatelessWidget {
             ),
             CupertinoActivityIndicator(
               radius: 20,
-              color: CupertinoColors.destructiveRed,
+              color: CupertinoColors.activeBlue,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
