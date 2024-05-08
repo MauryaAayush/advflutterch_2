@@ -8,7 +8,6 @@ class Custom_Scroll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoScrollbar(
-
       child: CupertinoPageScaffold(
           child: CustomScrollView(
         slivers: [
@@ -17,19 +16,24 @@ class Custom_Scroll extends StatelessWidget {
             largeTitle: Text('My people'),
             trailing: GestureDetector(
                 onTap: () {
-                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => Screen1(),));
+                  Navigator.of(context).push(CupertinoPageRoute(
+                    builder: (context) => Screen1(),
+                  ));
                 },
                 child: Icon(CupertinoIcons.right_chevron)),
           ),
 
           SliverList(
             delegate: SliverChildBuilderDelegate(
-                  (BuildContext context, int index) {
+              (BuildContext context, int index) {
                 return CupertinoListTile(
-                  title: Text('Person ${index + 1}',style: TextStyle(
-                    letterSpacing: 1,
-                  ),),
-                  subtitle: Text("${index+1}".toString()),
+                  title: Text(
+                    'Person ${index + 1}',
+                    style: TextStyle(
+                      letterSpacing: 1,
+                    ),
+                  ),
+                  subtitle: Text("${index + 1}".toString()),
                 );
               },
               childCount: 25,
