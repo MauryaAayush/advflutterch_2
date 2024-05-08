@@ -11,6 +11,9 @@ class AdaptiveMaterialCupertino extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+
     if (Provider.of<SystemProvider>(context, listen: true).isIOS) {
       return CupertinoApp(
           debugShowCheckedModeBanner: false, home: IOS_Screen());
