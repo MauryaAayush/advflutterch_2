@@ -183,6 +183,30 @@ A DialogBox provides a versatile interface element for displaying various types 
 
 
 
+
+##
+<h3 align="center"><i>Switch Operating System (Cupertino Widget)</i></h3>
+
+
+## About 
+
+-> In this app we can the turn Android into Ios Using Switch
+
+<div align="center">
+
+ <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/18cf2d9f-515a-4daf-a850-d9cc70ceaad2" height=500px hspace=20>  
+ <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/57c640a1-cfee-4cb7-87e8-8f9d7e340386" height=500px hspace=20>  
+ <video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/5e021168-f92a-4d56-ae53-9104c9929ea6">
+
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib">-> 🔗 See The Code 🔗 <-</a>
+</div>
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
