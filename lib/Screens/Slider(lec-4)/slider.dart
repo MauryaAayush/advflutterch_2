@@ -10,6 +10,7 @@ class Slider_Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return CupertinoPageScaffold(
         child:Center(
           child: CupertinoSlider(

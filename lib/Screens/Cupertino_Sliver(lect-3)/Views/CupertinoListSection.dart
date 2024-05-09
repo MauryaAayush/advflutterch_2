@@ -12,10 +12,10 @@ class Screen1 extends StatelessWidget {
           trailing: GestureDetector(
               onTap: () {
                 Navigator.of(context).push(CupertinoPageRoute(
-                  builder: (context) => Screen2(),
+                  builder: (context) => const Screen2(),
                 ));
               },
-              child: Icon(CupertinoIcons.right_chevron)),
+              child: const Icon(CupertinoIcons.right_chevron)),
         ),
         child: Center(
           child: Padding(
@@ -101,10 +101,8 @@ class Screen1 extends StatelessWidget {
                           CupertinoListTile.notched(
                             title: const Text(
                               'iCloud',
-                              style: TextStyle(fontSize: 21,
-                                fontWeight: FontWeight.w400
-                              ),
-
+                              style: TextStyle(
+                                  fontSize: 21, fontWeight: FontWeight.w400),
                             ),
                             subtitle: Text('aayush@9to5mac.com'),
                             leading: Image.asset('assets/images/cloud.png'),
