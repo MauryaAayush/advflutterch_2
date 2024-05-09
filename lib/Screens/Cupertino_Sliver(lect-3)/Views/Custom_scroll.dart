@@ -10,8 +10,8 @@ class Custom_Scroll extends StatelessWidget {
     return CupertinoScrollbar(
       child: CupertinoPageScaffold(
           child: CustomScrollView(
-        slivers: [
-          CupertinoSliverNavigationBar(
+           slivers: [
+            CupertinoSliverNavigationBar(
             automaticallyImplyLeading: false,
             largeTitle: Text('My people'),
             trailing: GestureDetector(
