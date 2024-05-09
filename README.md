@@ -213,9 +213,19 @@ A DialogBox provides a versatile interface element for displaying various types 
 <h3 align="center"><i>CupertinoSliverNavigationBar  & CupertinoListTile</i></h3>
 
 
-## About 
+## CupertinoSliverNavigationBar:
+-> The CupertinoSliverNavigationBar widget in Flutter is used to create a navigation bar in the style of iOS. <br>
+-> It is a sliver, which is a widget that can be used within a CustomScrollView or NestedScrollView to create custom scrolling experiences.
+
+## Feature:
+Large Title, Background Color and Appearance, Navigation Buttons, Border,  Search Bar, Hero Animation, nteractive Pop Gesture, Custom Widgets,etc..
 
 
+## CupertinoListTile:
+The CupertinoListTile widget in Flutter is a versatile and visually appealing component used to create list items in the style of iOS.
+
+## Feature:
+ Title and Subtitle,Leading and Trailing Widgets,Tappable Area,Accessory Widget, Cupertino Styling, Customization, Accessibility.
 
 <div align="center">
 <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/6950cf38-a191-487a-9093-ecb0db18c934" height=500px hspace=20>  
