@@ -33,7 +33,7 @@ class Screen1 extends StatelessWidget {
                               'General',
                               style: TextStyle(fontSize: 21.5),
                             ),
-                            leading: Image.asset('assets/images/display.svg'),
+                            leading: Image.asset('assets/images/settings.png'),
                             trailing: const Icon(
                               CupertinoIcons.forward,
                               color: CupertinoColors.inactiveGray,
