@@ -12,7 +12,7 @@ class IOS_Screen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          middle: Text('IOS'),
+          middle: const Text('IOS'),
           trailing: CupertinoSwitch(
             value:  Provider.of<SystemProvider>(context, listen: true).isIOS,
             onChanged: (value) {
@@ -27,7 +27,7 @@ class IOS_Screen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CupertinoButton(
-                  child: Icon(
+                  child: const Icon(
                     CupertinoIcons.list_bullet_indent,
                     size: 30,
                     color: CupertinoColors.activeBlue,
@@ -37,12 +37,12 @@ class IOS_Screen extends StatelessWidget {
                       context: context,
                       builder: (BuildContext builder) {
                         return CupertinoActionSheet(
-                          title: Text(
+                          title: const Text(
                             'Favorite Dessert',
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w500),
                           ),
-                          message: Padding(
+                          message: const Padding(
                             padding: EdgeInsets.symmetric(vertical: 14),
                             child: Text(
                               'Please select the best dessert from the\noptions below.',
