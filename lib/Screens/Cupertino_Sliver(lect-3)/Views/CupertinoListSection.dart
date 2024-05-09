@@ -104,7 +104,7 @@ class Screen1 extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 21, fontWeight: FontWeight.w400),
                             ),
-                            subtitle: Text('aayush@9to5mac.com'),
+                            subtitle: const Text('aayush@9to5mac.com'),
                             leading: Image.asset('assets/images/cloud.png'),
                             trailing: const Icon(
                               CupertinoIcons.forward,
