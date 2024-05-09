@@ -8,7 +8,7 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          middle: Text("Settings"),
+          middle: const Text("Settings"),
           trailing: GestureDetector(
               onTap: () {
                 Navigator.of(context).push(CupertinoPageRoute(
