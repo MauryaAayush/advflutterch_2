@@ -1,5 +1,6 @@
 import 'package:advflutterch_2/Screens/Cupertino_Widget(lec-2)/Provider/System_Provider.dart';
 import 'package:advflutterch_2/Screens/Date_Time_Picker(Lec-1)/Provider/Dialog_Provider_Screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Screens/Cupertino_Sliver(lect-3)/Views/Custom_scroll.dart';
@@ -8,6 +9,7 @@ import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Android/Android_Main.dart';
 import 'Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
 import 'Screens/Slider(lec-4)/slider.dart';
+import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Views/TabBar/TabBar_Screen.dart';
 
 
 void main() {
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return CupertinoApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       // home: AdaptiveMaterialCupertino(),
@@ -38,8 +40,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => const Android(),
         '/IOS': (context) => const Ios_Main(),
         '/check': (context) => const IOS_Screen(),
-        '/lec4': (context) => const Custom_Scroll(),
-        '/lec5': (context) => const Slider_Screen(),
+        '/lec3': (context) => const Custom_Scroll(),
+        '/lec4': (context) => const Slider_Screen(),
+        '/lec5': (context) => const TabBar_Screen(),
       },
     );
   }
