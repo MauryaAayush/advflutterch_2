@@ -10,6 +10,7 @@ class TabBar_Screen extends StatelessWidget {
         navigationBar: CupertinoNavigationBar(
           middle: Text('Tab Bar'),
         ),
+
         child: CupertinoTabScaffold(
           tabBar: CupertinoTabBar(items: [
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: "Home"),
