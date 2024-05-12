@@ -9,10 +9,12 @@ class SlidingSegmentScreen extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           CupertinoSliverNavigationBar(
-            largeTitle: Text('hello'),
+            middle: Text('Hello'),
+            largeTitle: Center(child: Text('Hello')),
+
           ),
           SliverFillRemaining(
-            child: Text('hello'),
+            child: Text('Radhey Radhey'),
           ),
         ],
       )
