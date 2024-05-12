@@ -1,6 +1,8 @@
 import 'package:advflutterch_2/Screens/TabBar,%20Slider,%20SliderSegmentControl(lec-5)/Model/List_Of_Screen.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../Sliding_Segment_Screen/Sliding_Segment_Screen.dart';
+
 class TabBar_Screen extends StatelessWidget {
   const TabBar_Screen({super.key});
 
@@ -9,10 +11,15 @@ class TabBar_Screen extends StatelessWidget {
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text('Tab Bar'),
+          trailing: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const Sliding_segment(),));
+              },
+              child: Icon(CupertinoIcons.right_chevron)),
         ),
 
         child: CupertinoTabScaffold(
-          tabBar: CupertinoTabBar(items: [
+          tabBar: CupertinoTabBar(items: const [
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: "Home"),
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.search),label: "Search"),
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.add_circled),label: "Add pages"),
