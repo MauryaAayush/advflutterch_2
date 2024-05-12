@@ -7,16 +7,16 @@ class Sliding_segment extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: CupertinoPageScaffold(
-          navigationBar: CupertinoNavigationBar(
-            middle: Text('Title'),
-          ),
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
-            child: Container(
-              height: 100,
-              width: 100,
-              color: CupertinoColors.activeBlue,
-            ),
+            child: CustomScrollView(
+              
+              slivers: [
+               CupertinoSliverNavigationBar(
+                 middle: Text('Text'),
+               )
+              ],
+            )
           )),
     );
   }
