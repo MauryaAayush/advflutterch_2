@@ -13,7 +13,7 @@ class TabBar_Screen extends StatelessWidget {
           middle: Text('Tab Bar'),
           trailing: GestureDetector(
               onTap: () {
-                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const Sliding_segment(),));
+                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const SlidingSegmentScreen(),));
               },
               child: Icon(CupertinoIcons.right_chevron)),
         ),

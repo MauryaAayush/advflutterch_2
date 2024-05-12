@@ -1,23 +1,22 @@
 import 'package:flutter/cupertino.dart';
 
-class Sliding_segment extends StatelessWidget {
-  const Sliding_segment({super.key});
+class SlidingSegmentScreen extends StatelessWidget {
+  const SlidingSegmentScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: CupertinoPageScaffold(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 50),
-            child: CustomScrollView(
-              
-              slivers: [
-               CupertinoSliverNavigationBar(
-                 middle: Text('Text'),
-               )
-              ],
-            )
-          )),
+    return CupertinoPageScaffold(
+      child: CustomScrollView(
+        slivers: [
+          CupertinoSliverNavigationBar(
+            largeTitle: Text('hello'),
+          ),
+          SliverFillRemaining(
+            child: Text('hello'),
+          ),
+        ],
+      )
     );
   }
 }
+
