@@ -260,9 +260,8 @@ The CupertinoSlidingSegmentedControl widget in Flutter is a segmented control th
 
 
 <div align="center">
-
-<img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/75b96b57-edf5-495e-b904-04b9b9fb4d50" height=500px hspace=20>  
 <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/ccab5c58-232c-4ddd-9a6f-cceaebbd502e" height=500px hspace=20>  
+<img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/75b96b57-edf5-495e-b904-04b9b9fb4d50" height=500px hspace=20>  
 <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/1f32b020-206c-4eda-b58a-ae806134484b" height=500px hspace=20>  
 <video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/7018ec72-509d-4083-a8b3-9f5fc2504e65">
 
