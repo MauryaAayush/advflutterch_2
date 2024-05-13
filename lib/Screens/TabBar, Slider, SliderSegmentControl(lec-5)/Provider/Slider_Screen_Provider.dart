@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class SlidingProvider extends ChangeNotifier{
+class SlidingScreenProvider extends ChangeNotifier{
   bool isAutomatic = false;
   bool isTruetone = false;
   bool isRaiseToWake = false;
 
-  double rangeslindervalue =0;
+  double Rangeslindervalue = 0;
 
   Brightness brightness = Brightness.dark;
 
@@ -29,7 +29,7 @@ class SlidingProvider extends ChangeNotifier{
 
   void rangeSliderChangeValue(double value)
   {
-    rangeslindervalue = value;
+    Rangeslindervalue = value;
     notifyListeners();
   }
 
@@ -39,5 +39,5 @@ class SlidingProvider extends ChangeNotifier{
     notifyListeners();
   }
 
-  Brightness get themebrigtness => brightness;
+  Brightness get brigtnessvalue => brightness;
 }

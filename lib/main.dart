@@ -9,6 +9,7 @@ import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Android/Android_Main.dart';
 import 'Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
 import 'Screens/Slider(lec-4)/slider.dart';
+import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Slider_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Tac_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Views/TabBar/TabBar_Screen.dart';
 
@@ -24,7 +25,9 @@ void main() {
     ChangeNotifierProvider(
       create: (context) => SliderProvider(),
     ),
-    ChangeNotifierProvider(create: (context) => TabBarScreen(),)
+    ChangeNotifierProvider(create: (context) => TabBarScreen(),),
+    
+    ChangeNotifierProvider(create: (context) => SlidingScreenProvider(),)
   ], child: const MyApp()));
 }
 

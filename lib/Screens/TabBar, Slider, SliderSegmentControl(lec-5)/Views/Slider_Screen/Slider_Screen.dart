@@ -1,6 +1,9 @@
+import 'package:advflutterch_2/Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
+import 'package:advflutterch_2/Screens/TabBar,%20Slider,%20SliderSegmentControl(lec-5)/Provider/Slider_Screen_Provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 class SliderScreen extends StatelessWidget {
   const SliderScreen({super.key});
@@ -90,8 +93,14 @@ class SliderScreen extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.w400),
                         ),
                         CupertinoSwitch(
-                          value: false,
-                          onChanged: (value) {},
+                          value: Provider.of<SlidingScreenProvider>(context,
+                                  listen: true)
+                              .isAutomatic,
+                          onChanged: (value) {
+                            Provider.of<SlidingScreenProvider>(context,
+                                    listen: false)
+                                .automatic(value);
+                          },
                         )
                       ],
                     ),
@@ -106,11 +115,19 @@ class SliderScreen extends StatelessWidget {
                     )),
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Icon(CupertinoIcons.sun_min_fill),
                       CupertinoSlider(
-                        value: 0.8,
-                        onChanged: (value) {},
+                        min: 0,
+                        max: 100,
+                        divisions: 10,
+                        value: Provider.of<SlidingScreenProvider>(context,
+                                listen: true)
+                            .Rangeslindervalue,
+                        onChanged: (value) {
+                          Provider.of<SlidingScreenProvider>(context,listen: false).rangeSliderChangeValue(value);
+                        },
                       ),
                       Icon(CupertinoIcons.sun_max_fill),
                     ],
@@ -127,8 +144,14 @@ class SliderScreen extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.w400),
                         ),
                         CupertinoSwitch(
-                          value: false,
-                          onChanged: (value) {},
+                          value: Provider.of<SlidingScreenProvider>(context,
+                                  listen: true)
+                              .isTruetone,
+                          onChanged: (value) {
+                            Provider.of<SlidingScreenProvider>(context,
+                                    listen: false)
+                                .truetone(value);
+                          },
                         )
                       ],
                     ),
@@ -170,8 +193,6 @@ class SliderScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
-
               CupertinoListSection(
                 children: [
                   Padding(
@@ -181,15 +202,15 @@ class SliderScreen extends StatelessWidget {
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Night Shift',
+                          'Auto-Lock',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
-                          width: 130,
+                          width: 187,
                         ),
                         Text(
-                          'Sunset to Sunrise',
+                          '3 Minutes',
                           style: TextStyle(
                               color: CupertinoColors.systemGrey,
                               fontWeight: FontWeight.w500),
@@ -213,8 +234,14 @@ class SliderScreen extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.w400),
                         ),
                         CupertinoSwitch(
-                          value: false,
-                          onChanged: (value) {},
+                          value: Provider.of<SlidingScreenProvider>(context,
+                                  listen: true)
+                              .isRaiseToWake,
+                          onChanged: (value) {
+                            Provider.of<SlidingScreenProvider>(context,
+                                    listen: false)
+                                .raisetowake(value);
+                          },
                         )
                       ],
                     ),
