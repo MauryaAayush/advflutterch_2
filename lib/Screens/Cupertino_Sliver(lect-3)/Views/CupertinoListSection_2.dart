@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+
 
 class Screen2 extends StatelessWidget {
   const Screen2({super.key});
