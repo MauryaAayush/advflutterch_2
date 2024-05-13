@@ -1,8 +1,5 @@
-import 'package:advflutterch_2/Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
 import 'package:advflutterch_2/Screens/TabBar,%20Slider,%20SliderSegmentControl(lec-5)/Provider/Slider_Screen_Provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class SliderScreen extends StatelessWidget {
@@ -35,14 +32,14 @@ class SliderScreen extends StatelessWidget {
                         Column(
                           children: [
                             Container(
-                              height: 150,
-                              width: 100,
+                              height: 180,
+                              width: 90,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(25)),
+                                color: CupertinoColors.systemTeal,
+                                  borderRadius: BorderRadius.all(Radius.circular(10)),
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/slider/light.png'))),
+                                          'assets/slider/light.png'),fit: BoxFit.contain)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -59,14 +56,13 @@ class SliderScreen extends StatelessWidget {
                         Column(
                           children: [
                             Container(
-                              height: 150,
-                              width: 100,
+                              height: 180,
+                              width: 90,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(20)),
+                                  borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/slider/light.png'))),
+                                          'assets/slider/dark.png'),fit: BoxFit.contain)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),

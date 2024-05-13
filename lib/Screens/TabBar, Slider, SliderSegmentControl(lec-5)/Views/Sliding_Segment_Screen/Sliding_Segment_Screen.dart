@@ -55,7 +55,10 @@ class SlidingSegmentScreen extends StatelessWidget {
         ),
         SliverFillRemaining(
           child: Center(
-            child: Text(Screen2[Provider.of<TabBarScreen>(context).index]),
+            child: Text(Screen2[Provider.of<TabBarScreen>(context).index],style: TextStyle(
+              fontSize: 30,
+
+            ),),
           ),
         ),
       ],

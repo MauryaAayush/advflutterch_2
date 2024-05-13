@@ -28,7 +28,10 @@ class TabBar_Screen extends StatelessWidget {
 
           ]),
           tabBuilder: (context, index) {
-            return Center(child: Text(Screen[index]));
+            return Center(child: Text(Screen[index],style: TextStyle(
+              fontSize: 30,
+              color: CupertinoColors.activeBlue
+            ),));
           },
         ));
   }
