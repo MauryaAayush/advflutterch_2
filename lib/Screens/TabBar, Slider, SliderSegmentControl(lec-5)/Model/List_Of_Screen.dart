@@ -5,3 +5,11 @@ List Screen = [
   "Favorite",
   "Account"
 ];
+
+List Screen2 = [
+  "Home Screen",
+  "Search",
+  "Add page",
+  "Favorite",
+  "Account"
+];
