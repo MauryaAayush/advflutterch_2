@@ -49,9 +49,10 @@ class SliderScreen extends StatelessWidget {
                               child: Text('Light'),
                             ),
                             CupertinoRadio(
-                              value: true,
-                              groupValue: true,
-                              onChanged: (value) {},
+                              value: Brightness.light,
+                              groupValue: Provider.of<SlidingScreenProvider>(context,listen: true).brightness,
+                              onChanged: (value) {
+                                Provider.of<SlidingScreenProvider>(context,listen: false).changeTheme(value ?? Brightness.light);                           },
                             )
                           ],
                         ),
@@ -72,9 +73,11 @@ class SliderScreen extends StatelessWidget {
                               child: Text('Dark'),
                             ),
                             CupertinoRadio(
-                              value: true,
-                              groupValue: true,
-                              onChanged: (value) {},
+                              value: Brightness.dark,
+                              groupValue: Provider.of<SlidingScreenProvider>(context,listen: true).brightness,
+                              onChanged: (value) {
+                                Provider.of<SlidingScreenProvider>(context,listen: false).changeTheme(value ?? Brightness.dark);
+                              },
                             )
                           ],
                         ),
@@ -117,19 +120,23 @@ class SliderScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(CupertinoIcons.sun_min_fill),
-                      CupertinoSlider(
-                        min: 0,
-                        max: 100,
-                        divisions: 10,
-                        value: Provider.of<SlidingScreenProvider>(context,
-                                listen: true)
-                            .Rangeslindervalue,
-                        onChanged: (value) {
-                          Provider.of<SlidingScreenProvider>(context,listen: false).rangeSliderChangeValue(value);
-                        },
+                      Icon(CupertinoIcons.sun_min_fill,color: CupertinoColors.systemGrey,),
+
+                      SizedBox(
+                        width: 280,
+                        child: CupertinoSlider(
+                          min: 0,
+                          max: 100,
+                          divisions: 10,
+                          value: Provider.of<SlidingScreenProvider>(context,
+                                  listen: true)
+                              .Rangeslindervalue,
+                          onChanged: (value) {
+                            Provider.of<SlidingScreenProvider>(context,listen: false).rangeSliderChangeValue(value);
+                          },
+                        ),
                       ),
-                      Icon(CupertinoIcons.sun_max_fill),
+                      Icon(CupertinoIcons.sun_max_fill,color: CupertinoColors.systemGrey),
                     ],
                   ),
                   Padding(
@@ -222,6 +229,7 @@ class SliderScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 20),
