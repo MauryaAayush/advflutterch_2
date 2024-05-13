@@ -7,7 +7,7 @@ class TabBarScreen extends ChangeNotifier
 
   void ChangedIndex(String index)
   {
-
+    this.index = int.parse(index);
     notifyListeners();
   }
 }

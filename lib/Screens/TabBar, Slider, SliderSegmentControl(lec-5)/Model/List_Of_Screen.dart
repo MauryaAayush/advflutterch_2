@@ -9,7 +9,6 @@ List Screen = [
 List Screen2 = [
   "Home Screen",
   "Search",
-  "Add page",
-  "Favorite",
-  "Account"
+  "Favorite Page",
+  "Account Page"
 ];
