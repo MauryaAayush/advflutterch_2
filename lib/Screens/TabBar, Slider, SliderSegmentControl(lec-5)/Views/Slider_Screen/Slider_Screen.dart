@@ -208,7 +208,7 @@ class SliderScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'True Tone',
+                          'Raise to wake',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w400),
                         ),

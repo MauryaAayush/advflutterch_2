@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
 class SlidingProvider extends ChangeNotifier{
-  bool isAuto = false;
-  bool istone = false;
-  bool isWake = false;
+  bool isAutomatic = false;
+  bool isTruetone = false;
+  bool isRaiseToWake = false;
 
   double rangeslindervalue =0;
 
@@ -11,19 +11,19 @@ class SlidingProvider extends ChangeNotifier{
 
   void automatic(bool value)
   {
-    isAuto = value;
+    isAutomatic = value;
     notifyListeners();
   }
 
   void truetone(bool value)
   {
-    istone = value;
+    isTruetone = value;
     notifyListeners();
   }
 
   void raisetowake(bool value)
   {
-    isWake = value;
+    isRaiseToWake = value;
     notifyListeners();
   }
 
