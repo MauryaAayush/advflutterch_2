@@ -241,6 +241,41 @@ The CupertinoListTile widget in Flutter is a versatile and visually appealing co
 </div>
 
 
+
+
+##
+<h3 align="center"><i>CupertinoTabBar, CupertinoSlider & CupertinoSlidingSegmentedControl</i></h3>
+
+
+## CupertinoTabBar:
+-> The CupertinoTabBar widget in Flutter is a crucial component for creating tab bars in the style of iOS. <br>
+-> It provides a visually appealing and intuitive way to navigate between different sections or views within an app.
+
+## CupertinoSlider:
+-> The CupertinoSlider widget in Flutter is a Cupertino-styled slider that allows users to select a value from a continuous range by dragging a thumb along a track.<br> 
+-> It provides a familiar and intuitive way for users to adjust settings or make selections.
+
+## CupertinoSlidingSegmentedControl:
+The CupertinoSlidingSegmentedControl widget in Flutter is a segmented control that allows users to select one option from a set of mutually exclusive choices. It provides a visually appealing and intuitive way for users to switch between different modes or options.
+
+
+<div align="center">
+<img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/ccab5c58-232c-4ddd-9a6f-cceaebbd502e" height=500px hspace=20>  
+<img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/75b96b57-edf5-495e-b904-04b9b9fb4d50" height=500px hspace=20>  
+<img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/1f32b020-206c-4eda-b58a-ae806134484b" height=500px hspace=20>  
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/7018ec72-509d-4083-a8b3-9f5fc2504e65">
+
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/TabBar%2C%20Slider%2C%20SliderSegmentControl(lec-5)">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
+
+
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
