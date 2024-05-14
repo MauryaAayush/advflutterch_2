@@ -11,7 +11,7 @@ class PageViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        children: [
+        children: const [
           Intro1(),
           Intro2(),
           Intro3(),
