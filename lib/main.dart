@@ -13,7 +13,6 @@ import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Slider_Scre
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Tac_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Views/TabBar/TabBar_Screen.dart';
 
-
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
@@ -25,9 +24,12 @@ void main() {
     ChangeNotifierProvider(
       create: (context) => SliderProvider(),
     ),
-    ChangeNotifierProvider(create: (context) => TabBarScreen(),),
-    
-    ChangeNotifierProvider(create: (context) => SlidingScreenProvider(),)
+    ChangeNotifierProvider(
+      create: (context) => TabBarScreen(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => SlidingScreenProvider(),
+    )
   ], child: const MyApp()));
 }
 
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       // home: AdaptiveMaterialCupertino(),
@@ -48,21 +50,8 @@ class MyApp extends StatelessWidget {
         '/lec3': (context) => const Custom_Scroll(),
         '/lec4': (context) => const Slider_Screen(),
         '/lec5': (context) => const TabBar_Screen(),
+        '/lec6': (context) => const TabBar_Screen(),
       },
-    );
-  }
-}
-
-
-class MyApp2 extends StatelessWidget {
-  const MyApp2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: ,
     );
   }
 }
