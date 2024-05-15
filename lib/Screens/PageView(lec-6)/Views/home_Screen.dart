@@ -8,28 +8,25 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(bottomNavigationBar: AnimatedBottomNavigationBar(
+    return Scaffold(
+        bottomNavigationBar: AnimatedBottomNavigationBar(
       icons: [
-      Icons.home,
-      Icons.search_rounded,
-      Icons.add_box_outlined,
-      Icons.favorite_border
+        Icons.home,
+        Icons.search_rounded,
+        Icons.add_box_outlined,
+        Icons.favorite_border
       ],
-
 
       splashSpeedInMilliseconds: 2,
       inactiveColor: Colors.white,
       backgroundColor: Colors.grey,
       splashColor: Colors.black,
-      activeIndex: Provider.of<TabBarScreen>(context,listen: true).index,
-      onTap:(value) {
-        Provider.of<TabBarScreen>(context,listen: false).ChangedIndex(value.toString());
+      activeIndex: Provider.of<TabBarScreen>(context, listen: true).index,
+      onTap: (value) {
+        Provider.of<TabBarScreen>(context, listen: false)
+            .ChangedIndex(value.toString());
       },
       //other params
-    )
-    );
-
-
+    ));
   }
 }
-
