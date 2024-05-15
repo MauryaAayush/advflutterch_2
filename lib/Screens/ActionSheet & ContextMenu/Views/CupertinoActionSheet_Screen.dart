@@ -35,7 +35,9 @@ class CupertinoActionSheetScreen extends StatelessWidget {
                     child: Text('Distructive Action')),
               ],
 
-              cancelButton: Text('Cancel'),
+              cancelButton: CupertinoActionSheetAction(onPressed: () {
+                Navigator.pop(context);
+              }, child: Text('Cancel'))
             ),
           );
         },
