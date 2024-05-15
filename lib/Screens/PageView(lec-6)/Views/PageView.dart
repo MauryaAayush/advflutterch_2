@@ -16,6 +16,7 @@ class PageViewScreen extends StatelessWidget {
           Intro2(),
           Intro3(),
           Home(),
+
         ],
       )
     );
