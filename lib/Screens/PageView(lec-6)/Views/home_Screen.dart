@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
         Icons.favorite_border
       ],
 
+
       splashSpeedInMilliseconds: 2,
       inactiveColor: Colors.white,
       backgroundColor: Colors.grey,
