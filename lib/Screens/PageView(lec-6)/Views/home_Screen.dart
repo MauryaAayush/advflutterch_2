@@ -17,7 +17,8 @@ class Home extends StatelessWidget {
       ],
 
 
-      notchSmoothness: NotchSmoothness.defaultEdge,
+      splashSpeedInMilliseconds: 2,
+      inactiveColor: Colors.white,
       backgroundColor: Colors.grey,
       splashColor: Colors.black,
       activeIndex: Provider.of<TabBarScreen>(context,listen: true).index,
