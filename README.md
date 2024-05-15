@@ -274,6 +274,36 @@ The CupertinoSlidingSegmentedControl widget in Flutter is a segmented control th
 
 
 
+##
+<h3 align="center"><i>Page View & BottomNavigationBar</i></h3>
+
+## Page View:
+Page view in Flutter is a widget that allows users to horizontally swipe through multiple child widgets, typically used for implementing carousel or onboarding screens. It manages the layout and scrolling behavior automatically.
+
+## Features :
+-> Customization: PageView allows customization of scroll physics, page alignment, and page snapping behavior.<br>
+-> Control: It offers methods to programmatically control the page being displayed, enabling seamless integration with other widgets and interactions.<br>
+
+## BottomNavigationBar:
+The BottomNavigationBar widget in Flutter is a built-in component for creating a navigation bar at the bottom of the screen. It typically contains multiple tabs or icons, allowing users to switch between different sections or pages of an app with ease.
+
+## Features :
+-> Customization: BottomNavigationBar enables customization of appearance, including icon size, selected item color, unselected item color, and more.<br>
+-> State Management: It automatically manages the state of selected items, ensuring consistent behavior across the app and simplifying development.<br>
+-> Flexibility: Developers can easily integrate BottomNavigationBar with other navigation systems like MaterialPageRoute or CupertinoPageRoute, enhancing navigation options for users.<br>
+-> Accessibility: It supports accessibility features like semantics and screen readers, making apps more inclusive and user-friendly.<br>
+
+
+<div align="center">
+
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/1e58d3d4-fbc0-45a1-811d-42aefb8b3460">
+
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/PageView(lec-6)">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
 
 
 ## Getting Started
