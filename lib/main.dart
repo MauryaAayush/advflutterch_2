@@ -3,6 +3,7 @@ import 'package:advflutterch_2/Screens/Date_Time_Picker(Lec-1)/Provider/Dialog_P
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'Screens/ActionSheet & ContextMenu/Views/CupertinoActionSheet_Screen.dart';
 import 'Screens/Cupertino_Sliver(lect-3)/Views/Custom_scroll.dart';
 import 'Screens/Cupertino_Widget(lec-2)/Views/IOS/IOS_Screen.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
@@ -43,11 +44,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return CupertinoApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       // home: AdaptiveMaterialCupertino(),
-      initialRoute: '/lec6',
+      initialRoute: '/lec7',
       routes: {
         '/': (context) => const Android(),
         '/IOS': (context) => const Ios_Main(),
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/lec4': (context) => const Slider_Screen(),
         '/lec5': (context) => const TabBar_Screen(),
         '/lec6': (context) => const PageViewScreen(),
+        '/lec7': (context) => const CupertinoActionSheetScreen(),
       },
     );
   }

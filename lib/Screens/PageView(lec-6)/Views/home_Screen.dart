@@ -14,11 +14,12 @@ class Home extends StatelessWidget {
         Icons.home,
         Icons.search_rounded,
         Icons.add_box_outlined,
-        Icons.favorite_border
+        Icons.favorite_border,
+        Icons.favorite_border,
       ],
 
-
-
+      gapLocation: GapLocation.end,
+      gapWidth: 0,
       splashSpeedInMilliseconds: 2,
       inactiveColor: Colors.white,
       backgroundColor: Colors.grey,
