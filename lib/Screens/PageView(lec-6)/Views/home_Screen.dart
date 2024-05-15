@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
       ],
 
 
+
       splashSpeedInMilliseconds: 2,
       inactiveColor: Colors.white,
       backgroundColor: Colors.grey,
