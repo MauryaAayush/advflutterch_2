@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
         '/lec4': (context) => const Slider_Screen(),
         '/lec5': (context) => const TabBar_Screen(),
         '/lec6': (context) => const PageViewScreen(),
-        '/lec7': (context) => const ContextMenuScreen(),
+        '/lec7': (context) => const ActionsheetScreen(),
       },
     );
   }

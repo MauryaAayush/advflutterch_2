@@ -22,37 +22,32 @@ class ContextMenuScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    _showContextMenu(context);
-                  },
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 35,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.lightBackgroundGray.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Albums',
-                          style: TextStyle(
-                            color: CupertinoColors.activeBlue,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 1,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Icon(
-                          CupertinoIcons.chevron_down,
+                Container(
+                  alignment: Alignment.center,
+                  height: 35,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.lightBackgroundGray.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Albums',
+                        style: TextStyle(
                           color: CupertinoColors.activeBlue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
                         ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(width: 5),
+                      Icon(
+                        CupertinoIcons.chevron_down,
+                        color: CupertinoColors.activeBlue,
+                      ),
+                    ],
                   ),
                 ),
                 Icon(
@@ -69,15 +64,10 @@ class ContextMenuScreen extends StatelessWidget {
                 crossAxisCount: 3,
                 childAspectRatio: 3 / 4,
               ),
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  _showContextMenu(context);
-                },
-                child: GalleryGridViews(
-                  Gallery[index]['img'],
-                  Gallery[index]['name'],
-                  Gallery[index]['number'],
-                ),
+              itemBuilder: (context, index) => GalleryGridViews(
+                Gallery[index]['img'],
+                Gallery[index]['name'],
+                Gallery[index]['number'],
               ),
               itemCount: Gallery.length,
             ),
@@ -87,42 +77,7 @@ class ContextMenuScreen extends StatelessWidget {
     );
   }
 
-  void _showContextMenu(BuildContext context) {
-    showCupertinoModalPopup(
-      context: context,
-      builder: (BuildContext context) => CupertinoActionSheet(
-        actions: [
-          CupertinoActionSheetAction(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the action sheet
-              // Perform copy operation
-            },
-            child: Text('Copy'),
-          ),
-          CupertinoActionSheetAction(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the action sheet
-              // Perform share operation
-            },
-            child: Text('Share'),
-          ),
-          CupertinoActionSheetAction(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the action sheet
-              // Perform favorite operation
-            },
-            child: Text('Favorite'),
-          ),
-        ],
-        cancelButton: CupertinoActionSheetAction(
-          onPressed: () {
-            Navigator.of(context).pop(); // Close the action sheet
-          },
-          child: Text('Cancel'),
-        ),
-      ),
-    );
-  }
+
 
   Widget GalleryGridViews(String img, String name, int number) {
     return Column(
