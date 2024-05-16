@@ -90,46 +90,37 @@ class ContextMenuScreen extends StatelessWidget {
   void _showContextMenu(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
-      builder: (BuildContext context) {
-        return CupertinoContextMenu(
-          actions: [
-            CupertinoContextMenuAction(
-              child: Text('Copy'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                // Perform copy operation
-              },
-            ),
-            CupertinoContextMenuAction(
-              child: Text('Share'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                // Perform share operation
-              },
-            ),
-            CupertinoContextMenuAction(
-              child: Text('Favorite'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                // Perform favorite operation
-              },
-            ),
-          ],
-          child: Container(
-            margin: EdgeInsets.all(5),
-            height: 110,
-            width: 110,
-            decoration: BoxDecoration(
-              color: CupertinoColors.systemBlue,
-              image: DecorationImage(
-                image: AssetImage('path_to_your_image'),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.circular(15),
-            ),
+      builder: (BuildContext context) => CupertinoActionSheet(
+        actions: [
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.of(context).pop(); // Close the action sheet
+              // Perform copy operation
+            },
+            child: Text('Copy'),
           ),
-        );
-      },
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.of(context).pop(); // Close the action sheet
+              // Perform share operation
+            },
+            child: Text('Share'),
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.of(context).pop(); // Close the action sheet
+              // Perform favorite operation
+            },
+            child: Text('Favorite'),
+          ),
+        ],
+        cancelButton: CupertinoActionSheetAction(
+          onPressed: () {
+            Navigator.of(context).pop(); // Close the action sheet
+          },
+          child: Text('Cancel'),
+        ),
+      ),
     );
   }
 
