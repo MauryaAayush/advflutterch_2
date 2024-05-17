@@ -15,6 +15,7 @@ import 'Screens/PageView(lec-6)/Provider/Page_Provider_Screen.dart';
 import 'Screens/PageView(lec-6)/Views/PageView.dart';
 import 'Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
 import 'Screens/Slider(lec-4)/slider.dart';
+import 'Screens/Sliver Widgets(lec-9)/views/Sliver_Screen.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Slider_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Tac_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Views/TabBar/TabBar_Screen.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       // home: AdaptiveMaterialCupertino(),
-      initialRoute: '/lec8',
+      initialRoute: '/lec9',
       routes: {
         '/': (context) => const Android(),
         '/IOS': (context) => const Ios_Main(),
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
         '/lec6': (context) => const PageViewScreen(),
         '/lec7': (context) => const ActionsheetScreen(),
         '/lec8': (context) => const Date_Picker_Screen(),
+        '/lec9': (context) => const SliverScreen(),
       },
     );
   }

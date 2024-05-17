@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import '../model/List.dart';
 
 class ContextMenuScreen extends StatelessWidget {
@@ -84,50 +85,54 @@ class ContextMenuScreen extends StatelessWidget {
     return Column(
       children: [
 
-        CupertinoContextMenu(
-          actions: <Widget>[
-            CupertinoContextMenuAction(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              isDefaultAction: true,
-              trailingIcon: CupertinoIcons.doc_on_clipboard_fill,
-              child: const Text('Copy'),
-            ),
-            CupertinoContextMenuAction(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              trailingIcon: CupertinoIcons.share,
-              child: const Text('Share'),
-            ),
-            CupertinoContextMenuAction(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              trailingIcon: CupertinoIcons.heart,
-              child: const Text('Favorite'),
-            ),
-            CupertinoContextMenuAction(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              isDestructiveAction: true,
-              trailingIcon: CupertinoIcons.delete,
-              child: const Text('Delete'),
-            ),
-          ],
-          child:  Container(
-            margin: EdgeInsets.all(5),
-            height: 110,
-            width: 110,
-            decoration: BoxDecoration(
-              // color: CupertinoColors.systemBlue,
-              image: DecorationImage(
-                image: AssetImage(img),
-                fit: BoxFit.cover,
+        SizedBox(
+          height: 120,
+          width: 120,
+          child: CupertinoContextMenu(
+            actions: <Widget>[
+              CupertinoContextMenuAction(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                isDefaultAction: true,
+                trailingIcon: CupertinoIcons.doc_on_clipboard_fill,
+                child: const Text('Copy'),
               ),
-              borderRadius: BorderRadius.circular(15),
+              CupertinoContextMenuAction(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                trailingIcon: CupertinoIcons.share,
+                child: const Text('Share'),
+              ),
+              CupertinoContextMenuAction(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                trailingIcon: CupertinoIcons.heart,
+                child: const Text('Favorite'),
+              ),
+              CupertinoContextMenuAction(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                isDestructiveAction: true,
+                trailingIcon: CupertinoIcons.delete,
+                child: const Text('Delete'),
+              ),
+            ],
+            child:  Container(
+              margin: EdgeInsets.all(5),
+              height: 210,
+              width: 210,
+              decoration: BoxDecoration(
+                // color: CupertinoColors.systemBlue,
+                image: DecorationImage(
+                  image: AssetImage(img),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(15),
+              ),
             ),
           ),
         ),
