@@ -50,7 +50,7 @@ class DatePickerSCreen extends StatelessWidget {
             placeholder: 'dd/mm/yyyy',
             prefix: Padding(
               padding: EdgeInsets.symmetric(horizontal: 6),
-              child: Text('Date'),
+              child: Text(''),
             ),
           ),
         ));
