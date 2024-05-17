@@ -7,7 +7,7 @@ import 'Screens/ActionSheet & ContextMenu(lect-7)/Views/CupertinoActionSheet_Scr
 
 import 'Screens/Cupertino_Sliver(lect-3)/Views/Custom_scroll.dart';
 import 'Screens/Cupertino_Widget(lec-2)/Views/IOS/IOS_Screen.dart';
-import 'Screens/DatePicker(lec-8)/Views/Cupertino_Datepicker_Screen.dart';
+
 import 'Screens/DatePicker(lec-8)/Views/Material_DatePicker_Screen.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Cupertino_UI/IOS/IOS_Main.dart';
 import 'Screens/Date_Time_Picker(Lec-1)/Views/Material_UI/Android/Android_Main.dart';
@@ -15,6 +15,7 @@ import 'Screens/PageView(lec-6)/Provider/Page_Provider_Screen.dart';
 import 'Screens/PageView(lec-6)/Views/PageView.dart';
 import 'Screens/Slider(lec-4)/Provider/Slider_Provider.dart';
 import 'Screens/Slider(lec-4)/slider.dart';
+import 'Screens/Sliver Widgets(lec-9)/Provider/Sliver_Provider.dart';
 import 'Screens/Sliver Widgets(lec-9)/views/Sliver_Screen.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Slider_Screen_Provider.dart';
 import 'Screens/TabBar, Slider, SliderSegmentControl(lec-5)/Provider/Tac_Screen_Provider.dart';
@@ -39,6 +40,9 @@ void main() {
     ),
     ChangeNotifierProvider(
       create: (context) => IntroProvider(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => DisplayTypeProvider(),
     )
   ], child: const MyApp()));
 }
