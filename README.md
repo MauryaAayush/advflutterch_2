@@ -306,8 +306,91 @@ The BottomNavigationBar widget in Flutter is a built-in component for creating a
 </div>
 
 
-## Getting Started
+##
+<h3 align="center"><i>2.5 CupertinoActionSheet & CupertinoContextMenu</i></h3>
 
+## CupertinoActionSheet 
+
+-> The CupertinoActionSheet widget in Flutter provides an action sheet in the style of Apple's iOS operating system.<br>
+-> It displays a list of options at the bottom of the screen, allowing users to choose an action.
+
+## Key Features:
+* Modal Interaction: Presents options in a modal interface, blocking interaction with the rest of the app until an action is chosen.
+* Versatility: Offers a variety of actions, including buttons, links, and menus, for flexible user interaction.
+* Native Integration: Seamlessly integrates with iOS apps, adhering to Cupertino design standards.
+* Customization: Allows developers to customize appearance, layout, and actions to suit app requirements.
+* Accessibility: Ensures accessibility features are implemented, facilitating ease of use for all users.
+
+## CupertinoContextMenu
+-> CupertinoContextMenu in Flutter is a widget that displays a context menu with iOS-style behavior, activated by long-pressing or force-pressing on its child widget.<br> 
+-> It's commonly used for providing additional actions or options in an app's interface.
+
+## Key Features:
+* Customizable Content: You can customize the content of the context menu with various widgets, including text, icons, and buttons.
+* Gesture Activation: It supports activation via long-press or force-press gestures, providing a familiar iOS interaction pattern.
+* Dynamic Positioning: The context menu automatically adjusts its position to ensure it's fully visible within the screen bounds.
+* Flexible Behavior: It allows you to define different behaviors for when the menu is dismissed, such as closing on tap outside or remaining open until explicitly closed.
+* Integration with Cupertino Design: CupertinoContextMenu seamlessly integrates with the Cupertino design language, maintaining a consistent look and feel across iOS apps.
+
+
+<div align="center">
+
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/efd15385-68a4-49d0-a5c9-909f0e376aa6">
+
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/ActionSheet%20%26%20ContextMenu(lect-7)/Views)">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
+
+
+
+
+##
+<h3 align="center"><i> Date Picker (Android & iOS)</i></h3>
+
+## Date Picker
+
+-> The DatePicker widget in Flutter allows users to select a date from a calendar-like interface. <br>
+-> It provides a convenient way to capture date input from users in your Flutter applications.
+
+## Key Features:
+* Ease of Use: Intuitive navigation and selection process.
+* Customization: Ability to tailor to specific format and date ranges.
+* Accessibility: Support for screen readers and keyboard navigation.
+* Internationalization: Adaptability to various date formats and languages.
+* Validation: Built-in checks to ensure input correctness.
+* Range Selection: Option to select a range of dates.
+* Integration: Easy incorporation into existing projects or frameworks.
+* Performance: Lightweight and optimized for fast operation.
+
+
+## Cupertino Date Picker 
+
+-> The CupertinoDatePicker widget in Flutter provides a date picker in the style of Apple's iOS operating system. <br>
+-> It allows users to select a date by rotating a wheel-based interface.
+
+## Key Features:
+* iOS Design Integration: Blends seamlessly with iOS apps, adhering to Cupertino design standards.
+* Date and Time Selection: Enables intuitive selection of dates and times using native iOS controls.
+* Customization: Allows for flexible customization of formats, ranges, and appearance.
+* Accessibility: Ensures usability for all users through accessible features.
+* Animation: Smooth transitions enhance the overall user experience.
+
+  
+<div align="center">
+
+
+ <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/c19a7a88-3fdc-4b31-8ba0-e09c404e75db" height=500px hspace=20>  
+  <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/bef49a5c-91aa-47be-99ed-cd0835508616" height=500px hspace=20>  
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/2c444651-df8d-4055-a636-3d33f5443c3e">
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/DatePicker(lec-8)/Views">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
