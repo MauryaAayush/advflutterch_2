@@ -1,60 +1,58 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-final TextEditingController dateController = TextEditingController();
-
-class DatePicker extends StatelessWidget {
-  const DatePicker({super.key});
+class DatePickerSCreen extends StatelessWidget {
+  const DatePickerSCreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 1,
-        shadowColor: Colors.grey,
-        title: Text(
-          'Date Picker',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        leading: Icon(Icons.menu),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        child: Column(
-          children: [
-            TextField(
-              controller: dateController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.black, width: 1.5),
-                ),
-                suffixIcon: IconButton(
-                  onPressed: () async {
-                    DateTime selectedDate = await showDatePicker(
-                      context: context,
-                      firstDate: DateTime(1947),
-                      lastDate: DateTime(2047),
-                      initialDate: DateTime.now(),
-                    ) ??
-                        DateTime.now();
 
-                    String formattedDate =
-                        "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}";
-                    dateController.text = formattedDate;
+    final TextEditingController dateController = TextEditingController();
 
-                    print(selectedDate);
-                  },
-                  icon: Icon(Icons.calendar_month),
-                ),
-                hintText: 'dd/mm/yyy',
-                labelText: 'Date',
+    return  CupertinoPageScaffold(
+         navigationBar: CupertinoNavigationBar(
+           middle: Text('Date Picker'),
+         ),
+        child: Center(
+          child: CupertinoTextField(
+            controller: dateController,
+            readOnly: true,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: CupertinoColors.black,
+                width: 1.5,
               ),
-              readOnly: true,
+              borderRadius: BorderRadius.circular(10),
             ),
-          ],
-        ),
-      ),
-    );
+            suffix: CupertinoButton(
+              padding: EdgeInsets.zero,
+              onPressed: () async {
+                DateTime selectedDate = await showCupertinoModalPopup<DateTime>(
+                  context: context,
+                  builder: (context) => Container(
+                    height: 200,
+                    child: CupertinoDatePicker(
+                      initialDateTime: DateTime.now(),
+                      minimumDate: DateTime(1947),
+                      maximumDate: DateTime(2047),
+                      mode: CupertinoDatePickerMode.date,
+                      onDateTimeChanged: (date) {
+                        String formattedDate = "${date.day}/${date.month}/${date.year}";
+                        dateController.text = formattedDate;
+                      },
+                    ),
+                  ),
+                ) ?? DateTime.now();
+
+                print(selectedDate);
+              },
+              child: Icon(CupertinoIcons.calendar),
+            ),
+            placeholder: 'dd/mm/yyyy',
+            prefix: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 6),
+              child: Text('Date'),
+            ),
+          ),
+        ));
   }
 }

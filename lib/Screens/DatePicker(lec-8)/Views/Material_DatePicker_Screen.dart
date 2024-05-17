@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Cupertino_Datepicker_Screen.dart';
+
 class Date_Picker_Screen extends StatelessWidget {
   const Date_Picker_Screen({super.key});
 
@@ -7,13 +9,18 @@ class Date_Picker_Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController dateController = TextEditingController();
+      final TextEditingController dateController = TextEditingController();
     // final ValueNotifier<DateTime?> _selectedDate = ValueNotifier<DateTime?>(null);
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: Text("Date Picker"),
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => DatePickerSCreen(),));
+          }, icon: Icon(Icons.arrow_right_alt_rounded))
+        ],
       ),
       body: Center(
         child: Column(
