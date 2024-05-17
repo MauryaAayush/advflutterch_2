@@ -391,6 +391,36 @@ The BottomNavigationBar widget in Flutter is a built-in component for creating a
 <div align="center">
 <a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/DatePicker(lec-8)/Views">-> 👉📚 See The Code 📚 👈<-</a>
 </div>
+
+
+##
+<h3 align="center"><i> Sliver Widgets </i></h3>
+
+## Sliver Widgets:
+Sliver widgets in Flutter optimize scrollable layouts like lists and grids, offering efficient memory usage and smooth scrolling, with components like SliverAppBar, SliverList, and SliverGrid.
+
+## Key Features:
+* Efficient Memory Usage: Sliver widgets use a lightweight rendering approach, which helps in efficiently managing memory, especially for large lists or grids.
+* Smooth Scrolling: They provide smooth scrolling performance even with complex UI layouts, thanks to their optimized rendering and layout mechanisms.
+* Variable Item Sizes: SliverList and SliverGrid allow for items with variable heights or widths, accommodating different content sizes within the same list or grid.
+* Customizable Scroll Effects: SliverAppBar and SliverPersistentHeader enable custom scroll effects such as collapsing headers, sticky headers, and persistent headers during scrolling.
+* Flexible Layouts: CustomScrollView acts as a container for combining multiple sliver widgets, allowing for flexible and dynamic layouts that adapt to various screen sizes and orientations.
+* Integration with ScrollControllers: Sliver widgets seamlessly integrate with ScrollControllers for precise control over scrolling behavior, including scroll offsets, animations, and event handling.
+
+
+<div align="center">
+ <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/2ad581be-6b6c-4907-af43-8fe8dcfb6574" height=500px hspace=20>  
+  <img src="https://github.com/MauryaAayush/advflutterch_2/assets/143180849/89d48215-fc86-440d-9b79-5ad6bd98df3f" height=500px hspace=20>  
+<video src = "https://github.com/MauryaAayush/advflutterch_2/assets/143180849/c3dce674-8601-44dc-b225-6e3a5d1267b9">
+</div>
+
+###
+<div align="center">
+<a href="https://github.com/MauryaAayush/advflutterch_2/tree/master/lib/Screens/Sliver%20Widgets(lec-9)">-> 👉📚 See The Code 📚 👈<-</a>
+</div>
+
+
+  
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
